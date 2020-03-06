@@ -49,12 +49,173 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+@bg-color: #e3e8e5;
+@primary-font: Verdana, Geneva, Tahoma, sans-serif;
+.flex-property() {
+	display: flex;
+	justify-content: center;
+}
+
 * {
     box-sizing: border-box;
 }
-
+html {
+	font-size: 62.5%;
+}
 html, body {
 	height: 100%;
 	
+}
+header, section {
+	border: 1px solid;
+}
+
+header {
+  height: 50vh;
+  width: 100%;
+  background-image: url("/Image/header-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @bg-color;
+
+  @media (max-width: 500px) {
+	  display: flex;
+	  justify-content: center;
+	  height: 75vh;
+
+	  img {
+		display: none;
+	}
+  }
+
+  nav {
+	// margin-left: 50%;
+	display: flex;
+	width: 50%;
+	
+
+	a {
+		text-decoration: none;
+		color: black;
+		font-size: 2.3rem;
+		margin: 10px auto;
+		font-family: @primary-font;
+			
+		
+	}
+	@media (max-width: 500px) {
+		flex-direction: column;
+		margin-top: 45%;		
+		
+	}
+  }
+  img {
+	  border-radius: 50%;
+	  margin-left: 80%;
+  }
+}
+
+section.text-container {
+	padding: 10px 0;
+	background-color: @bg-color;
+	font-family: @primary-font;
+	
+	
+
+	h1 {
+		font-size: 3rem;
+		margin: 5px;
+		
+	}
+	h2 {
+		font-size: 2.3rem;
+		margin: 5px;
+		
+	}
+	h3 {
+		font-size: 1.3rem;
+		margin: 5px;
+	}
+
+	@media (max-width: 500px) {
+		.flex-property();
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+section.aboutMe {
+	.flex-property();
+	background-color: @bg-color;
+	padding: 10px 0;
+	font-family: @primary-font;
+	
+
+	div.about {
+
+	width: 49%;
+	margin: 0 15px;
+
+	h2 {
+		font-size: 2.3rem;
+		margin: 5px 0;
+	}
+	p {
+		font-size: 1.5rem;
+	}
+	li {
+		font-size: 1.5rem;
+		margin: 8px 0;
+	}
+	}
+	
+}
+
+section.work {
+	padding: 15px 0;
+	background-color: @bg-color;
+	font-family: @primary-font;
+	h2 {
+		font-size: 2.3rem;
+		margin: 5px;
+		text-align: center;
+	}
+	table {
+		width: 98%;
+		margin: 0 auto;
+	}
+	th{
+		font-size: 2rem;
+		border: 1px solid black;
+		padding: 1.5%;
+	}
+	
+	td {
+		border: 1px solid black;
+		font-size: 1.5rem;
+		text-align: center;
+		padding: 3%;
+	  }
+
+}
+
+footer {
+	background-color: @bg-color;
+	font-family: @primary-font;
+	margin-top: 30px;
+
+	div.contactMe {
+		padding-left: 13px;
+	}
+
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	@media (max-width: 500px) {
+		text-align: center;
+	}
 }
 

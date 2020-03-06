@@ -130,42 +130,141 @@ table {
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 html,
 body {
   height: 100%;
 }
-
-header, section, div, p, nav {
+header,
+section {
   border: 1px solid;
-  margin: 5px;
 }
-
 header {
   height: 50vh;
-  background-image: url("/Image/header-background.jpg"), url("/Image/rezz.jpg");
-  background-repeat: no-repeat, no-repeat;
-  /* background-size: cover; */
-  background-position: center, left;
+  width: 100%;
+  background-image: url("/Image/header-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #e3e8e5;
 }
-
-nav {
-  margin-left: 50%;
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    justify-content: center;
+    height: 75vh;
+  }
+  header img {
+    display: none;
+  }
+}
+header nav {
   display: flex;
-  justify-content: space-around;
+  width: 50%;
 }
-
+header nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 2.3rem;
+  margin: 10px auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+    margin-top: 45%;
+  }
+}
+header img {
+  border-radius: 50%;
+  margin-left: 80%;
+}
+section.text-container {
+  padding: 10px 0;
+  background-color: #e3e8e5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section.text-container h1 {
+  font-size: 3rem;
+  margin: 5px;
+}
+section.text-container h2 {
+  font-size: 2.3rem;
+  margin: 5px;
+}
+section.text-container h3 {
+  font-size: 1.3rem;
+  margin: 5px;
+}
+@media (max-width: 500px) {
+  section.text-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 section.aboutMe {
   display: flex;
   justify-content: center;
+  background-color: #e3e8e5;
+  padding: 10px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.about {
-  width: 50%;
+section.aboutMe div.about {
+  width: 49%;
+  margin: 0 15px;
 }
-
-table {
-  width: 100%;
+section.aboutMe div.about h2 {
+  font-size: 2.3rem;
+  margin: 5px 0;
 }
-
-
-
+section.aboutMe div.about p {
+  font-size: 1.5rem;
+}
+section.aboutMe div.about li {
+  font-size: 1.5rem;
+  margin: 8px 0;
+}
+section.work {
+  padding: 15px 0;
+  background-color: #e3e8e5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section.work h2 {
+  font-size: 2.3rem;
+  margin: 5px;
+  text-align: center;
+}
+section.work table {
+  width: 98%;
+  margin: 0 auto;
+}
+section.work th {
+  font-size: 2rem;
+  border: 1px solid black;
+  padding: 1.5%;
+}
+section.work td {
+  border: 1px solid black;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 3%;
+}
+footer {
+  background-color: #e3e8e5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 30px;
+}
+footer div.contactMe {
+  padding-left: 13px;
+}
+footer h3 {
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  footer {
+    text-align: center;
+  }
+}
