@@ -181,7 +181,7 @@ header img {
   margin-left: 80%;
 }
 section.text-container {
-  padding: 10px 0;
+  padding: 10px 0 10px 10px;
   background-color: #e3e8e5;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -191,7 +191,7 @@ section.text-container h1 {
 }
 section.text-container h2 {
   font-size: 2.3rem;
-  margin: 5px;
+  margin: 10px auto;
 }
 section.text-container h3 {
   font-size: 1.3rem;

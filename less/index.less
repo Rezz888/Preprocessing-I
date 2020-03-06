@@ -56,6 +56,10 @@ table {
 	display: flex;
 	justify-content: center;
 }
+.font-margin() {
+	font-size: 2.3rem;
+	margin: 10px auto;
+}
 
 * {
     box-sizing: border-box;
@@ -98,8 +102,7 @@ header {
 	a {
 		text-decoration: none;
 		color: black;
-		font-size: 2.3rem;
-		margin: 10px auto;
+		.font-margin();
 		font-family: @primary-font;
 			
 		
@@ -117,9 +120,10 @@ header {
 }
 
 section.text-container {
-	padding: 10px 0;
+	padding: 10px 0 10px 10px;
 	background-color: @bg-color;
 	font-family: @primary-font;
+	
 	
 	
 
@@ -129,8 +133,7 @@ section.text-container {
 		
 	}
 	h2 {
-		font-size: 2.3rem;
-		margin: 5px;
+		.font-margin();
 		
 	}
 	h3 {
